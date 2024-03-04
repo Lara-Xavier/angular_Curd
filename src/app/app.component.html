@@ -1,0 +1,19 @@
+
+<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark bg-dark px-3" *ngIf="user">
+  <div class="navbar-nav">
+    <a class="nav-item nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+    <a class="nav-item nav-link" routerLink="/users" routerLinkActive="active">Users</a>
+      <button class="btn btn-link nav-item nav-link" (click)="logout()">Logout</button>
+  </div>
+</nav>
+
+<!-- main app container -->
+<div class="container">
+  
+  <router-outlet></router-outlet>
+  <alert></alert>
+</div>
+
+
+<!-- https://jasonwatmore.com/angular-15-16-free-course-8-dockerize-app-with-nginx -->
